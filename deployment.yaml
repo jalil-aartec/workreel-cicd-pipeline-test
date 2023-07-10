@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dashboard-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dashboard
+  template:
+    metadata:
+      labels:
+        app: dashboard
+    spec:
+      containers:
+        - name: dashboard
+          image: workreel.azurecr.io/dashboard
+          ports:
+            - containerPort: 2000
+          resources:
+            requests:
+              cpu: "30m"
+            limits:
+              cpu: "60m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dashboard-service
+spec:
+  ports:
+    - port: 80
+      targetPort: 2000
+  selector:
+    app: dashboard
