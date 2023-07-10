@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: jalilaartecworkreelcicdpipelinetest 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jalilaartecworkreelcicdpipelinetest
+  template:
+    metadata:
+      labels:
+        app: jalilaartecworkreelcicdpipelinetest 
+    spec:
+      containers:
+        - name: jalilaartecworkreelcicdpipelinetest 
+          image: workreel.azurecr.io/jalilaartecworkreelcicdpipelinetest
+          ports:
+          - containerPort: 80
