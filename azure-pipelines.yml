@@ -6,7 +6,7 @@
 trigger:
 - main
 
-pool: himayat-ThinkPad-T460s
+pool: default
 
 steps:
 - script: echo Hello, world!
