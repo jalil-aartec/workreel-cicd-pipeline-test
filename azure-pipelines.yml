@@ -6,8 +6,7 @@
 trigger:
 - main
 
-pool:
-  vmImage: ubuntu-latest
+pool: himayat-ThinkPad-T460s
 
 steps:
 - script: echo Hello, world!
