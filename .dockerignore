@@ -1,0 +1,5 @@
+.next
+node_modules
+.example.env.production
+.example.env.local
+.example.env.dev

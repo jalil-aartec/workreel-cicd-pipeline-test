@@ -1,0 +1,24 @@
+# Use the official Node.js image as the base image
+FROM node:16-alpine as build
+
+WORKDIR /var/www/html/dashboard-temp
+
+COPY package.json yarn.lock ./
+
+RUN yarn install --frozen-lockfile --production=true
+
+COPY . .
+ENV NEXT_PUBLIC_BACKEND_URL=https://workreel.com/server
+
+RUN yarn next build
+
+
+FROM node:16-alpine
+WORKDIR /var/www/html/dashboard
+COPY --from=build /var/www/html/dashboard-temp/public /var/www/html/dashboard/public
+COPY --from=build /var/www/html/dashboard-temp/.next /var/www/html/dashboard/.next
+COPY --from=build /var/www/html/dashboard-temp/node_modules /var/www/html/dashboard/node_modules
+COPY --from=build /var/www/html/dashboard-temp/package.json /var/www/html/dashboard/package.json
+
+# Use a custom CMD to run the application
+CMD ["yarn", "start-dashboard"]

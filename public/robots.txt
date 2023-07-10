@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.workreel.com
+
+# Sitemaps
+Sitemap: https://www.workreel.com/sitemap.xml
+Sitemap: https://www.workreel.com/server-sitemap.xml

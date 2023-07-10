@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+
+// Additional styles
+@import '../styles/utility-patterns.scss';
+@import '../styles/range-slider.scss';
+@import '../styles/toggle-switch.scss';
+@import '../styles/theme.scss';
+
+@tailwind utilities;
+
+// Additional Tailwind directives: https://tailwindcss.com/docs/functions-and-directives/#responsive
+@layer {
+    .rtl {
+        direction: rtl;
+    }
+}
+
+// See Alpine.js: https://github.com/alpinejs/alpine#x-cloak
+[x-cloak] {
+    display: none;
+}

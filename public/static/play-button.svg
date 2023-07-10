@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" style="user-select: auto;"><rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="none" stroke="none" style="user-select: auto;"/>
+    <defs style="user-select: auto;">
+        <linearGradient x1="78.169%" y1="9.507%" x2="25.477%" y2="88.896%" id="play" style="user-select: auto;">
+            <stop stop-color="#F4F4F5" stop-opacity=".8" offset="0%" style="user-select: auto;"/>
+            <stop stop-color="#F4F4F5" offset="100%" style="user-select: auto;"/>
+        </linearGradient>
+    </defs>
+    
+<g class="currentLayer" style="user-select: auto;"><title style="user-select: auto;">Layer 1</title>
+        <circle fill="url(#play)" cx="48.612247467041016" cy="48.20408248901367" r="48" id="svg_2" style="user-select: auto;" class=""/>
+        <path fill="#009792" d="M56.61224487423897,48.20408162474632 a0.999,0.999 0 0 0 -0.4270000000000002,-0.8200000000000004 l-10,-7 A1,1 0 0 0 44.61224487423897,41.20408162474632 V55.20408162474632 a0.999,0.999 0 0 0 1.573,0.8200000000000004 l10,-7 A0.995,0.995 0 0 0 56.61224487423897,48.20408162474632 V48.20408162474632 c0,0.0010000000000000009 0,0.0010000000000000009 0,0 z" id="svg_3" style="user-select: auto;" class="" stroke-opacity="1" stroke="#009792" fill-opacity="1"/>
+    </g></svg>
