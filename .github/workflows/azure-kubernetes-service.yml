@@ -39,6 +39,7 @@ env:
   CONTAINER_NAME: "test-webapp"
   RESOURCE_GROUP: "workreel"
   CLUSTER_NAME: "newWorkreelCluster"
+  NAMESPACE: "workreel"
   DEPLOYMENT_MANIFEST_PATH: "./deployment.yaml"
 
 jobs:
@@ -102,3 +103,5 @@ jobs:
           manifests: ${{ env.DEPLOYMENT_MANIFEST_PATH }}
           images: |
             ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.CONTAINER_NAME }}:${{ github.sha }}
+          namespace: ${{ env.NAMESPACE }} # Specify your own namespace here
+
