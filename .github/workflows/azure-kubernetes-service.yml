@@ -1,33 +1,18 @@
-name: Azure Login
+# File: .github/workflows/workflow.yml
 
-on:
-  push:
-    branches:
-      - main
+on: [push]
+
+name: AzureLoginSample
 
 jobs:
-  login:
 
+  build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Install Azure CLI
-        run: |
-          curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-        
-      - name: Set up Azure CLI
-        uses: azure/login@v1
-        with:
-          creds: |
-            ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-            ${{ secrets.TENANT }}
-            ${{ secrets.SERVICE_PRINCIPAL }}
-            ${{ secrets.SERVICE_PRINCIPAL_PASSWORD }}
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        environment: 'AzureStack'
 
-      - name: Azure CLI script
-        run: |
-          # Your Azure CLI commands here
-          az account show
-          az resource list --query "[].{Name:name, Location:location, Type:type}"
+    - run: |
+        az webapp list
