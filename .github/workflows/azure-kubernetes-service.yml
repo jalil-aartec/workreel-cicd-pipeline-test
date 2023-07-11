@@ -36,7 +36,7 @@ on:
 
 env:
   AZURE_CONTAINER_REGISTRY: "workreel"
-  CONTAINER_NAME: ""
+  CONTAINER_NAME: "test-webapp"
   RESOURCE_GROUP: "workreel"
   CLUSTER_NAME: "NewWorkreelCluster"
   DEPLOYMENT_MANIFEST_PATH: "./deployment.yaml"
