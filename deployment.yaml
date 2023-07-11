@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: test-dashboard
-          image: workreel.azurecr.io/test
+          image: workreel.azurecr.io/test-webapp
           ports:
             - containerPort: 2000
           resources:
