@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dashboard-deployment
+  name: test-dashboard-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: dashboard
+      app: test-dashboard
   template:
     metadata:
       labels:
-        app: dashboard
+        app: test-dashboard
     spec:
       containers:
-        - name: dashboard
+        - name: test-dashboard
           image: workreel.azurecr.io/test
           ports:
             - containerPort: 2000
@@ -26,10 +26,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: dashboard-service
+  name: test-dashboard-service
 spec:
   ports:
     - port: 80
       targetPort: 2000
   selector:
-    app: dashboard
+    app: test-dashboard
