@@ -28,7 +28,7 @@
 # For more options with the actions used below please refer to https://github.com/Azure/login
 
 name: Build and deploy dashboard to AKS
-run-name: ${{ github.actor }} is deploying dashboard on azure vm
+run-name: ${{ github.actor }} is deploying dashboard to azure aks cluster
 
 on:
   push:
